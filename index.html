@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="GameWorld Team">
+    <meta name="description" content="GameWorld - Your ultimate gaming destination for PC, PlayStation, and Xbox games">
+    <title>GameWorld</title>
+    
+    <!-- Theme Stylesheet -->
+    <link rel="stylesheet" href="css/NewVegas.css">
+</head>
+<body>
+    
+    <!-- ======================================== -->
+    <!-- HEADER SECTION -->
+    <!-- ======================================== -->
+    <header class="site-header">
+        <div class="container">
+            
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.php">
+                    <h1>GAMEWORLD</h1>
+                </a>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.php" class="active">Home</a></li>
+                    <li><a href="site_functions/products.php">Products</a></li>
+                    <li><a href="site_functions/about.php">About Us</a></li>
+                    <li><a href="site_functions/contact.php">Contact</a></li>
+                    <li><a href="site_functions/download.php">Download</a></li>
+                    <li><a href="site_functions/login.php">Login</a></li>
+                    <li><a href="site_functions/blog.php">Blog</a></li>
+                    <li><a href="site_functions/checkout.php" class="cart-link">🛒 Cart (0)</a></li>
+                    <li><a href="#" class="wishlist-link">❤️ Wishlist (0)</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <span>Theme:</span>
+                <a href="?theme=default" class="theme-btn active">Default</a>
+                <a href="?theme=newvegas" class="theme-btn">Fallout</a>
+                <a href="?theme=starwars" class="theme-btn">Star Wars</a>
+            </div>
+            
+        </div>
+    </header>
+    
+    <!-- ======================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ======================================== -->
+    <main class="main-content">
+        
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="banner-overlay">
+                <div class="container">
+                    <h1 class="banner-title">Welcome to GameWorld</h1>
+                    <p class="banner-subtitle">Discover the best games across all platforms</p>
+                    <a href="site_functions/products.php" class="cta-button">Browse Games</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Popular Games Section -->
+        <section class="popular-games">
+            <div class="container">
+                <h2 class="section-title">Most Popular Games</h2>
+                
+                <div class="products-grid">
+                    
+                    <!-- Product Card Example -->
+                    <article class="product-card">
+                        
+                        <!-- Product Image -->
+                        <div class="product-image">
+                            <img src="images/products/gta5.jpg" alt="Grand Theft Auto V">
+                            
+                            <!-- Wishlist Button -->
+                            <form method="POST" class="wishlist-form">
+                                <input type="hidden" name="product_id" value="1">
+                                <button type="submit" name="add_to_wishlist" class="wishlist-btn">
+                                    🤍
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Product Info -->
+                        <div class="product-info">
+                            <h3 class="product-name">Grand Theft Auto V</h3>
+                            <p class="product-price">$29.99</p>
+                            <p class="product-description">
+                                Open-world action-adventure game set in Los Santos
+                            </p>
+                            
+                            <!-- Add to Cart Form -->
+                            <form method="POST" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="1">
+                                <button type="submit" name="add_to_cart" class="btn-add-cart">
+                                    Add to Cart
+                                </button>
+                            </form>
+                        </div>
+                    </article>
+                    
+                    <!-- More product cards... -->
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title">Shop by Platform</h2>
+                
+                <div class="categories-grid">
+                    
+                    <!-- PlayStation -->
+                    <article class="category-card playstation">
+                        <a href="site_functions/products.php?categoryId=1">
+                            <div class="category-content">
+                                <h3>PlayStation</h3>
+                                <p>Exclusive PS4 & PS5 Games</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Xbox -->
+                    <article class="category-card xbox">
+                        <a href="site_functions/products.php?categoryId=2">
+                            <div class="category-content">
+                                <h3>Xbox</h3>
+                                <p>Xbox One & Series X|S Games</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- PC -->
+                    <article class="category-card pc">
+                        <a href="site_functions/products.php?categoryId=3">
+                            <div class="category-content">
+                                <h3>PC</h3>
+                                <p>Digital PC Game Downloads</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Page Example -->
+        <section class="products-section">
+            <div class="container">
+                
+                <h1 class="page-title">PC Games</h1>
+                
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <a href="site_functions/products.php" class="filter-btn">All Games</a>
+                    <a href="site_functions/products.php?categoryId=1" class="filter-btn">PlayStation</a>
+                    <a href="site_functions/products.php?categoryId=2" class="filter-btn">Xbox</a>
+                    <a href="site_functions/products.php?categoryId=3" class="filter-btn active">PC</a>
+                </div>
+                
+                <!-- Products with Checkboxes -->
+                <form method="POST" class="products-form">
+                    <div class="bulk-actions">
+                        <button type="submit" name="add_multiple" class="btn-bulk-add">
+                            Add Selected to Cart
+                        </button>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <!-- Product cards with checkboxes... -->
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+        
+        <!-- Contact Form Example -->
+        <section class="contact-page">
+            <div class="container">
+                
+                <h1 class="page-title">Contact Us</h1>
+                
+                <div class="contact-form-container">
+                    <form method="POST" action="contact.php" class="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Question *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                            <button type="reset" class="btn-reset">Reset Form</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- Shopping Cart Example -->
+        <section class="checkout-page">
+            <div class="container">
+                
+                <h1 class="page-title">Shopping Cart</h1>
+                
+                <form method="POST" class="cart-form">
+                    <div class="cart-table-container">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Image</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="cart-item">
+                                    <td class="product-name">Grand Theft Auto V</td>
+                                    <td class="product-image">
+                                        <img src="images/products/gta5.jpg" alt="GTA V" width="80">
+                                    </td>
+                                    <td class="product-price">$29.99</td>
+                                    <td class="product-quantity">
+                                        <label for="quantity-item-1" class="sr-only">Quantity for Grand Theft Auto V</label>
+                                        <input id="quantity-item-1" type="number" name="quantity[1]" value="1" min="0" max="99" class="quantity-input">
+                                    </td>
+                                    <td class="product-subtotal">$29.99</td>
+                                    <td class="product-remove">
+                                        <a href="checkout.php?remove=1" class="btn-remove">❌</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <button type="submit" name="update_cart" class="btn-update-cart">Update Cart</button>
+                        <a href="products.php" class="btn-continue-shopping">Continue Shopping</a>
+                    </div>
+                </form>
+                
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span class="summary-value">$29.99</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (0%):</span>
+                        <span class="summary-value">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span class="summary-value">FREE</span>
+                    </div>
+                    <hr>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span class="summary-value">$29.99</span>
+                    </div>
+                    <button class="btn-checkout">Proceed to Checkout</button>
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ======================================== -->
+    <!-- FOOTER SECTION -->
+    <!-- ======================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-info">
+                    <h3>GAMEWORLD</h3>
+                    <p>Your ultimate gaming destination for PC, PlayStation, and Xbox games.</p>
+                    <p>&copy; 2025 GameWorld. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-categories">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.php?categoryId=1">PlayStation</a></li>
+                        <li><a href="products.php?categoryId=2">Xbox</a></li>
+                        <li><a href="products.php?categoryId=3">PC</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
